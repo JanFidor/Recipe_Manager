@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.recipe_manager.recyclerView.RecipeViewModel" />
+        <variable
+            name="popup"
+            type="com.example.recipe_manager.popup.RecipeDelete" />
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/background_dark"
+        app:cardUseCompatPadding="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/recipe_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:theme="@style/Text"
+                android:hint="@string/ask_delete"
+                />
+
+            <Button
+                android:id="@+id/recipe_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recipe_confirm"
+                android:layout_alignParentStart="true"
+                android:theme="@style/Button"
+                android:text="@string/Confirm"
+                android:onClick="@{() -> popup.deleteRecipe()}"
+                />
+
+            <Button
+                android:id="@+id/recipe_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/recipe_confirm"
+                android:layout_alignParentEnd="true"
+                android:theme="@style/Button"
+                android:text="@string/Cancel"
+                android:onClick="@{() -> popup.dismiss()}"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

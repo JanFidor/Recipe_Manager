@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+        name="viewModel"
+        type="com.example.recipe_manager.recyclerView.RecipeViewModel" />
+
+        <variable
+            name="popup"
+            type="com.example.recipe_manager.popup.RecipeCreate" />
+    </data>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/background_dark"
+            app:cardUseCompatPadding="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/name_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:inputType="text"
+                    android:padding="5sp"
+                    android:hint="@string/Name"
+                    android:theme="@style/Text"
+                    />
+
+                <EditText
+                    android:id="@+id/url_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/name_edit_text"
+                    android:layout_centerHorizontal="true"
+                    android:inputType="textUri"
+                    android:padding="5sp"
+                    android:hint="@string/Url"
+                    android:theme="@style/Text"
+                    />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:id="@+id/first_row"
+                android:layout_below="@+id/url_edit_text"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:theme="@style/Text"
+                    android:text="@string/Type"
+                    />
+
+                <Spinner
+                    android:id="@+id/type_spinner"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:entries="@array/types"
+                    android:gravity="center_horizontal"
+                    android:theme="@style/Dropdown" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:id="@+id/second_row"
+                android:layout_below="@+id/first_row"
+                >
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:theme="@style/Text"
+                    android:text="@string/Time"
+                    />
+
+                <Spinner
+                    android:id="@+id/time_spinner"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_horizontal"
+                    android:entries="@array/times"
+                    android:theme="@style/Dropdown" />
+            </RelativeLayout>
+                <Button
+                    android:id="@+id/add_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/second_row"
+                    android:theme="@style/Button"
+                    android:text="@string/Add"
+                    android:clickable="true"
+                    android:onClick="@{() -> popup.createRecipe()}"
+                    />
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/second_row"
+                    android:layout_alignParentEnd="true"
+                    android:theme="@style/Button"
+                    android:text="@string/Cancel"
+                    android:clickable="true"
+                    android:onClick="@{() -> popup.dismiss()}"
+                    />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+</layout>

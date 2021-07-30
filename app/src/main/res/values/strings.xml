@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Recipe Manager</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings for Recipe Holder -->
+    <string name="ask_delete">Delete this recipe</string>
+    <!-- Attributes for filer -->
+    <string name="Filter">Filter</string>
+    <string name="Type">Type</string>
+    <string name="Time">Time</string>
+
+
+    <!-- Default values of Text Fields-->
+    <string name="Name">Name</string>
+    <string name="Url">URL</string>
+
+    <!-- Names for Buttons -->
+    <string name="Add">Add</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Confirm">Confirm</string>
+</resources>

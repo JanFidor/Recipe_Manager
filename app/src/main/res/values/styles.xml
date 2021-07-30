@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.DoNotDim" parent="android:Theme">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Background">
+        <item name="android:layout_margin">5sp</item>
+        <item name="android:background">@color/background_dark</item>
+    </style>
+
+    <!-- Spinner Menu Theme -->
+    <style name="Spinner">
+        <item name="android:textColorPrimary">@color/text_dark</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/background_dark</item>
+    </style>
+
+    <!-- DropDown Menu Theme -->
+    <style name="Dropdown">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="android:textSize">22sp</item>
+        <item name ="android:gravity">center_horizontal</item>
+        <item name = "android:dropDownWidth">70sp</item>
+        <item name="android:background">@color/background_dark</item>
+    </style>
+
+
+    <!-- Default TextView Theme -->
+    <style name="Text">
+
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorHint">@color/text_dark</item>
+        <item name="android:textColorPrimary">@color/text_dark</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Default Button Theme -->
+    <style name="Button">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:backgroundTint">@color/background_light</item>
+    </style>
+
+</resources>
